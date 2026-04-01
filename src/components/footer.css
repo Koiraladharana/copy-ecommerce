@@ -1,0 +1,147 @@
+.footer {
+  background: #111111;
+  border-top: 1px solid #2a2a2a;
+  padding: 3rem 2rem 1.5rem;
+  box-sizing: border-box;
+  margin-top: 4rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── TOP SECTION ── */
+.footer-top {
+  display: grid;
+  /* mobile first — 1 column */
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* ── BRAND ── */
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  color: #f5c518;
+  margin-bottom: 0.8rem;
+}
+.footer-logo span { color: #e50914; }
+
+.footer-tagline {
+  color: #888;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  max-width: 100%;
+}
+
+/* SOCIALS */
+.footer-socials { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #181818;
+  border: 1px solid #2a2a2a;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.social-btn:hover {
+  border-color: #f5c518;
+  color: #f5c518;
+  background: rgba(245,197,24,0.08);
+}
+
+/* ── LINKS GRID — wraps all 3 columns together on mobile ── */
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* 2 columns on mobile */
+  gap: 1.5rem;
+}
+
+/* ── COLUMNS ── */
+.footer-col { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.footer-col-title {
+  color: #f0f0f0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.footer-link {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s;
+  width: fit-content;
+  font-family: 'DM Sans', sans-serif;
+}
+.footer-link:hover { color: #f5c518; }
+
+/* ── DIVIDER ── */
+.footer-divider {
+  border: none;
+  border-top: 1px solid #2a2a2a;
+  margin-bottom: 1.2rem;
+}
+
+/* ── BOTTOM ── */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;        /* stack on mobile */
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+.footer-copy {
+  color: #555;
+  font-size: 0.82rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.footer-tmdb {
+  color: #555;
+  font-size: 0.78rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.footer-tmdb a { color: #c9a112; text-decoration: none; font-weight: 600; }
+.footer-tmdb a:hover { color: #f5c518; }
+
+/* ── TABLET 600px+ ── */
+@media (min-width: 600px) {
+  .footer-top {
+    grid-template-columns: 1fr;   /* still 1 col but links go 3 wide */
+  }
+  .footer-links-grid {
+    grid-template-columns: 1fr 1fr 1fr;  /* 3 columns for links */
+  }
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-tmdb { text-align: right; }
+}
+
+/* ── DESKTOP 900px+ ── */
+@media (min-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1.8fr 2fr;  /* brand left, links right */
+    align-items: start;
+  }
+  .footer-links-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .footer-tagline { max-width: 280px; }
+}
+
+/* ── LARGE DESKTOP 1200px+ ── */
+@media (min-width: 1200px) {
+  .footer { padding: 3.5rem 4rem 1.5rem; }
+}
